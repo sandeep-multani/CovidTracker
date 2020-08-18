@@ -12,7 +12,7 @@ export default {
     getCountries() {
         return fetch(buildUrl("countries")).then((response) => response.json());
     },
-    getCountryDetails(countryId) {
-        return fetch(buildUrl(`country/${countryId}`)).then((response) => response.json());
+    getCountryDetails(countryId, from, to) {
+        return fetch(buildUrl(`total/country/${countryId}?from=${from}&to=${to}`)).then((response) => response.json());
     }
 }
